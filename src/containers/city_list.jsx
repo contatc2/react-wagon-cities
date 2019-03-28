@@ -10,13 +10,13 @@ import City from './city';
 
 
 class CityList extends Component {
-  static defaultProps = {
-    cities: [
-  { name: 'Paris', address: '16 Villa Gaudelet, 75011 Paris', slug: 'paris' },
-  { name: 'London', address: '14-22 Elder St, London E1 6BT', slug: 'london' },
-  { name: 'Berlin', address: 'Rudi-Dutschke-Straße 26, 10969 Berlin', slug: 'berlin' },
-  ]
-  }
+  // static defaultProps = {
+  //   cities: [
+  //     { name: 'Paris', address: '16 Villa Gaudelet, 75011 Paris', slug: 'paris' },
+  //     { name: 'London', address: '14-22 Elder St, London E1 6BT', slug: 'london' },
+  //     { name: 'Berlin', address: 'Rudi-Dutschke-Straße 26, 10969 Berlin', slug: 'berlin' },
+  //   ]
+  // }
 
   componentWillMount() {
     this.props.setCities();
@@ -30,7 +30,7 @@ class CityList extends Component {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
-    { setCities: setCities },
+    { setCities },
     dispatch
   );
 }
@@ -42,5 +42,5 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(null, mapDispatchToProps)(CityList);
+export default connect(mapStateToProps, mapDispatchToProps)(CityList);
 
