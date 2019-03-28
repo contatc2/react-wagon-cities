@@ -1,1 +1,8 @@
-// TODO: add and export your own actions
+import cities from '../../Data/cities';
+
+export default function setCities() {
+  return {
+    type: 'SET_CITIES',
+    payload: cities
+  };
+}
