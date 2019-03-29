@@ -5,9 +5,12 @@ const ActiveCity = (props) => {
   if (!props.activeCity) {
     return null;
   }
+  const imageUrl = `https://www.lewagon.com/api/v1/cities/${props.activeCity.slug}/cover?`;
   return (
     <div className="active-city">
       <h2>{props.activeCity.name}</h2>
+      <p>{props.activeCity.address}</p>
+      <img src={imageUrl} alt=""/>
     </div>
   );
 };

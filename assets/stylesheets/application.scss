@@ -23,6 +23,10 @@ body {
     h3 {
       margin-top: 0;
     }
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
 
@@ -39,6 +43,6 @@ body {
     margin-left: 16px;
   }
   &.active {
-    border: 6px yellow dashed;
+    border: 6px yellow solid;
   }
 }
