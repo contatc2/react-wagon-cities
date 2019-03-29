@@ -10,6 +10,8 @@ body {
   display: flex;
   .cities {
     width: 30%;
+    border: 0.5px white solid;
+    border-bottom: none;
   }
   .active-city {
     width: 70%;
@@ -29,6 +31,14 @@ body {
   cursor: pointer;
 }
 
-.active {
-  border: 6px yellow dashed;
+.city {
+  border-bottom: 0.5px white solid;
+  padding: 8px ;
+  p {
+    margin-bottom: 0px;
+    margin-left: 16px;
+  }
+  &.active {
+    border: 6px yellow dashed;
+  }
 }

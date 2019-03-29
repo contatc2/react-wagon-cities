@@ -9,11 +9,16 @@ class City extends Component {
   }
 
   render() {
+    let cityClass = "city";
+    if (this.props.city === this.props.activeCity) {
+      cityClass += " active";
+    }
+
     return (<div
-      className={this.props.city === this.props.activeCity ? "active" : ""}
+      className={cityClass}
       onClick={this.handleClick}
     >
-      <h3>{this.props.city.name}</h3>
+      <p>{this.props.city.name}</p>
     </div>
     );
   }

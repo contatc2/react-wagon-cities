@@ -7,7 +7,7 @@ const ActiveCity = (props) => {
   }
   return (
     <div className="active-city">
-      <h3>{props.activeCity.name}</h3>
+      <h2>{props.activeCity.name}</h2>
     </div>
   );
 };
