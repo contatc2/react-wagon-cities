@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import setCities from '../actions';
+import { setCities } from '../actions';
 
 import City from './city';
-
-
-// const
-
 
 class CityList extends Component {
   // static defaultProps = {
@@ -23,7 +19,11 @@ class CityList extends Component {
   }
 
   render() {
-    return this.props.cities.map(city => (<City city={city} key={city.name} />));
+    return (
+      <div className="cities">
+        {this.props.cities.map(city => (<City city={city} key={city.name} />))}
+      </div>
+    );
   }
 }
 
